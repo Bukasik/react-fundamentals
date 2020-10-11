@@ -10,7 +10,7 @@
   <script type="module">
     const e = React.createElement
     const rootElement = document.getElementById('root')
-    const children = [e('span', {children: 'Hello'}), e('span', {children: 'World'})]
+    const children = [e('span', {children: 'Hello'}), ' ', e('span', {children: 'World'})]
     const newDiv = e('div', {className: 'container', children})
     ReactDOM.render(newDiv, rootElement)
   </script>

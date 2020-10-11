@@ -4,7 +4,7 @@
 import React from 'react'
 import '../box-styles.css'
 
-const Box = ({style, className, ...props}) => {
+const Box = ({style, className='', ...props}) => {
   return (
     <div
       className={`box ${className}`}

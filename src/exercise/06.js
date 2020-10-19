@@ -3,7 +3,6 @@
 
 import React from 'react'
 
-function UsernameForm({onSubmitUsername}) {
   // 🐨 add a submit event handler here (`handleSubmit`).
   // 💰 Make sure to accept the `event` as an argument and call
   // `event.preventDefault()` to prevent the default behavior of form submit
@@ -18,11 +17,17 @@ function UsernameForm({onSubmitUsername}) {
 
   // 🐨 make sure to associate the label to the input by specifying an `id` on
   // the input and a matching value as an `htmlFor` prop on the label.
+  const UsernameForm = ({onSubmitUsername}) =>{
+    const handleSubmit = (event) => {
+      event.preventDefault()
+      onSubmitUsername(event.target.elements.usernameInput.value)
+    }
+
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <div>
-        <label>Username:</label>
-        <input type="text" />
+        <label htmlFor="usernameInput">Username:</label>
+        <input id="usernameInput" type="text" />
       </div>
       <button type="submit">Submit</button>
     </form>

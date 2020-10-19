@@ -22,7 +22,7 @@ import React from 'react'
         <label htmlFor="usernameInput">Username:</label>
         <input id="usernameInput" type="text" onChange={handleChange}/>
       </div>
-      <div>
+      <div role="alert">
         {error}
       </div>
       <button disabled={Boolean(error)} type="submit">
